@@ -1,6 +1,6 @@
 CFLAGS = -Wall
 
-.PHONY: all clean
+.PHONY: clean
 
 all: dummy-server.bin
 
@@ -8,8 +8,8 @@ dummy-server.bin: main.c mongoose.o
 	$(CC) $(CFLAGS) $^ -o $@
 
 mongoose.o: mongoose.c
-	$(CC) $(CFLAGS) -c $^ -o $@
+	$(CC) $(FLAGS) -c $^ -o $@
 
 clean:
-	$(RM) *.o *.bin
+	$(RM) $(PROG) *.o *.bin
 

@@ -6,3 +6,7 @@
 
 # Vim swap files
 .*.swp
+
+# Static files
+/static/*
+!/static/.gitkeep
